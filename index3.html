@@ -10,22 +10,11 @@
         <title>Feedback</title>
 
         <script>
-          function submit() {
-            let name = document.querySelector("#name").value;
+          function send() {
+            document.querySelector("#name").style.backgroundColor = "green";
+            document.querySelector("#subject").style.backgroundColor = "green";
 
-            if (name == "") {
-              alert("Type Your name!");
-              return;
-            };
-            let subject = document.querySelector("#name").value;
-            if (subject == "") {
-              alert("Type Your subject!");
-              return;
-            };
-
-            alert("Thank You for Your subject!");
           };
-
           function reset() {
             document.getElementById("frm1").reset();
           };
@@ -60,13 +49,15 @@
             <div class="form">
                 <form id="frm1">
 
-                  <label for="name">Name</label>
+                  <label for="name">Name </label>
                   <input type="text" id="name" name="firstname" placeholder="Your name...">
+                  <br>
 
                   <label for="subject">Subject</label>
                   <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                  <br>
 
-                  <input type="button" onclick="submit()" value="Submit">
+                  <input type="button" onclick="send()" value="Send">
                   <input type="button" onclick="reset()" value="Reset">
 
                 </form>
